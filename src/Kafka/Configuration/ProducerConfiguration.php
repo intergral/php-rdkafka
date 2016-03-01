@@ -116,7 +116,7 @@ class ProducerConfiguration
         $topicConf = new \RdKafka\TopicConf();
 
         $topicConf->set("request.required.acks", $this->requestRequiredAcks);
-        $topicConf->set("enforce.isr.cnt", $this->enforceIsrCnt);
+        /* $topicConf->set("enforce.isr.cnt", $this->enforceIsrCnt); */
         $topicConf->set("request.timeout.ms", $this->requestTimeoutMs);
 
         return $topicConf;
