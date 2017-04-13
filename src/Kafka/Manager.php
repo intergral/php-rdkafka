@@ -59,6 +59,8 @@ class Manager
             $this->rdKafkaProducer = $this->createProducer();
         }
 
+        $this->rdKafkaProducer->setLogLevel(LOG_DEBUG);
+
         return new ProducerTopicFacade(
             $this->rdKafkaProducer->newTopic($topic, $producerConfiguration->toRdKafkaTopicConfig())
         );
